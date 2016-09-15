@@ -62,7 +62,7 @@ digraph kom2014
 
     # keterangan
     {rank="sink" interdep ganjilgenap elektif}
-    interdep [shape="note"; color="#007700"; label="Interdepartemen"]
+    interdep [shape="note"; color="#007700"; label="Interdep"]
     ganjilgenap [shape="note"; color="#bb0000"; label="Ganjil-Genap (bisa diambil semester ini atau setelahnya)";]
     elektif [shape="note"; style="dashed"; label="Elektif"]
 
