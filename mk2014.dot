@@ -15,7 +15,7 @@ digraph kom2014
     {rank="same" 1 Penkom Matematika}
     {rank="same" 2 Algor Kalkulus}
     {rank="same" 3 Dasprog Alin Strukdis Radig Metstat PHP TOK}
-    {rank="same" 4 Basprog Strukdat RPL Orkom Basdat Metkuan Komnum}
+    {rank="same" 4 Basprog Strukdat RPL OAK Basdat Metkuan Komnum}
     {rank="same" 5 AI Grafkom SO SI IMK Analgor}
     {rank="same" 6 PCD PSBO Komdat Damin Siscerdas}
     {rank="same" 7 Etikom MPTP MPPL Bioinf}
@@ -24,14 +24,14 @@ digraph kom2014
     Strukdis -> Matematika
     TOK -> Kalkulus
     Basprog -> Dasprog
-    Orkom -> Radig
+    OAK -> Radig
     Strukdat -> {Dasprog Strukdis}
     RPL -> Algor
     Komnum -> Dasprog
     Metkuan -> PHP
     AI -> {Dasprog Strukdis}        // -> Strukdat ?
     Grafkom -> Alin
-    SO -> Orkom
+    SO -> OAK
     Analgor -> {Dasprog Strukdis}   // -> Strukdat ?
     Komdat -> SO
     Siscerdas -> Metkuan
@@ -40,15 +40,15 @@ digraph kom2014
     PSBO -> Algor
     MPPL -> RPL
 
-    #interdept
-    Matematika, Kalkulus, Metstat, Alin, PHP, Bioinf [color="green"]
+    #interdep
+    Matematika, Kalkulus, Metstat, Alin, PHP, Bioinf [color="#007700"]
 
     # elektif
     PSTR, PTG, TKI, Infosec, Sispak, Enterprise, NLP, Paralel [style="dashed"]
     {rank="same" 5 PSTR, PTG, TKI}
     {rank="same" 6 Infosec, Sispak, Enterprise, NLP}
     {rank="same" 7 Paralel}
-    PSTR -> Orkom
+    PSTR -> OAK
     PTG -> Basdat
     TKI -> {Metstat Strukdat}
     Infosec -> Strukdis
@@ -58,12 +58,13 @@ digraph kom2014
     Paralel -> Komdat
 
     # ganjil-genap
-    TOK, Metkuan, Komnum, Analgor, PSTR, PTG, TKI, Sispak, Enterprise, NLP [color="red"]
+    TOK, Metkuan, Komnum, Analgor, PSTR, PTG, TKI, Sispak, Enterprise, NLP [color="#bb0000"]
 
     # keterangan
-    {rank="sink" elektif ganjilgenap}
-    elektif [shape="note"; style="dashed"; label="MK Elektif"]
-    ganjilgenap [shape="note"; color="red"; labeljust="l"; label="Ganjil-Genap (bisa diambil semester ini atau setelahnya)";]
+    {rank="sink" interdep ganjilgenap elektif}
+    interdep [shape="note"; color="#007700"; label="Interdepartemen"]
+    ganjilgenap [shape="note"; color="#bb0000"; label="Ganjil-Genap (bisa diambil semester ini atau setelahnya)";]
+    elektif [shape="note"; style="dashed"; label="Elektif"]
 
     # title
     label="Struktur Kurikulum Dept Ilmu Komputer IPB (2014)"
