@@ -8,17 +8,18 @@ digraph kom2015
     subgraph sem {
         node [shape="plaintext"]
         edge [style="invis"]
-        7 -> 6 -> 5 -> 4 -> 3 -> 2 -> 1
+        8 -> 7 -> 6 -> 5 -> 4 -> 3 -> 2 -> 1 -> Semester
     }
 
     # mayor
-    {rank="same" 1 Penkom Matematika}
-    {rank="same" 2 Algor Kalkulus}
+    {rank="same" 1 Matematika}
+    {rank="same" 2 Algor Kalkulus Penkom}
     {rank="same" 3 Dasprog Alin Strukdis Radig Metstat PHP Matkom}
     {rank="same" 4 Basprog Strukdat RPL OAK Basdat Metkuan Komnum}
     {rank="same" 5 AI Grafkom SO SI IMK Analgor}
     {rank="same" 6 PCD PSBO Komdat Damin Siscerdas}
-    {rank="same" 7 Etikom MPTP MPPL Bioinf}
+    {rank="same" 7 PKL Etikom MPTP MPPL Bioinf Kolokium}
+    {rank="same" 8 Seminar TA}
     Dasprog -> Algor
     Alin -> Matematika
     Strukdis -> Matematika
@@ -50,7 +51,7 @@ digraph kom2015
     {rank="same" 7 Paralel}
     PSTR -> OAK
     PTG -> Basdat
-    TKI -> {Metstat Strukdat}
+    TKI -> {PHP Strukdat}
     Infosec -> Strukdis
     Sispak -> AI
     Enterprise -> SI
@@ -61,13 +62,13 @@ digraph kom2015
     Matkom, Metkuan, Komnum, Analgor, PSTR, PTG, TKI, Sispak, Enterprise, NLP [color="#bb0000"]
 
     # keterangan
-    {rank="sink" interdep ganjilgenap elektif}
-    interdep [shape="note"; color="#007700"; label="Interdep"]
-    ganjilgenap [shape="note"; color="#bb0000"; label="Ganjil-Genap (bisa diambil semester ini atau setelahnya)";]
+    {rank="sink" Semester interdep ganjilgenap elektif}
+    interdep [shape="note"; color="#007700"; label="Interdepartemen"]
+    ganjilgenap [shape="note"; color="#bb0000"; label="Ganjil-genap";]
     elektif [shape="note"; style="dashed"; label="Elektif"]
 
     # title
-    label="Struktur Kurikulum Dept Ilmu Komputer IPB (2015)"
+    label="Struktur Kurikulum Program Sarjana Ilmu Komputer IPB (2015)"
     labeljust="r"
     fontname="Fira Sans"
 }

@@ -1,4 +1,4 @@
-digraph kom2015
+digraph kom2016
 {
     node [shape="box"; fontname="Fira Sans"]
     edge [dir="back"]
@@ -17,8 +17,8 @@ digraph kom2015
     {rank="same" 3 Dasprog Alin Strukdis Radig Metstat PHP Matkom}
     {rank="same" 4 Basprog Strukdat RPL OAK Basdat Metkuan Komnum}
     {rank="same" 5 AI Grafkom SO SI IMK Analgor}
-    {rank="same" 6 PCD PSBO Komdat Damin Siscerdas}
-    {rank="same" 7 PKL Etikom MPTP MPPL Bioinf Kolokium}
+    {rank="same" 6 PCD PSBO Komdat Damin Siscerdas Bioinf}
+    {rank="same" 7 PKL Etikom MPTP MPPL Kolokium}
     {rank="same" 8 Seminar TA}
     Dasprog -> Algor
     Alin -> Matematika
@@ -59,7 +59,7 @@ digraph kom2015
     Paralel -> Komdat
 
     # ganjil-genap
-    Matkom, Metkuan, Komnum, Analgor, PSTR, PTG, TKI, Sispak, Enterprise, NLP [color="#bb0000"]
+    Matkom, Metkuan, Komnum, Analgor, PSTR, PTG, TKI, Sispak, Enterprise, NLP, Bioinf [color="#bb0000"]
 
     # keterangan
     {rank="sink" Semester interdep ganjilgenap elektif}
@@ -113,7 +113,7 @@ digraph kom2015
     TKI         [label="Temu Kembali\nInformasi"]
 
     # title
-    label="Struktur Kurikulum Program Sarjana Ilmu Komputer IPB (2015)"
+    label="Struktur Kurikulum Program Sarjana Ilmu Komputer IPB (2016)"
     labeljust="r"
     fontname="Fira Sans"
 }
