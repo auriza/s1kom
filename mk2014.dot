@@ -45,21 +45,21 @@ digraph kom2014
     Matematika, Kalkulus, Metstat, Alin, PHP, Bioinf [color="#007700"]
 
     # elektif
-    PSTR, PTG, TKI, Infosec, Sispak, Enterprise, NLP, Paralel [style="dashed"]
+    PSTR, PTG, TKI, KI, Sispak, Enterprise, PSBA, Paralel [style="dashed"]
     {rank="same" 5 PSTR, PTG, TKI}
-    {rank="same" 6 Infosec, Sispak, Enterprise, NLP}
+    {rank="same" 6 KI, Sispak, Enterprise, PSBA}
     {rank="same" 7 Paralel}
     PSTR -> OAK
     PTG -> Basdat
     TKI -> {PHP Strukdat}
-    Infosec -> Strukdis
+    KI -> Strukdis
     Sispak -> AI
     Enterprise -> SI
-    NLP -> Metkuan
+    PSBA -> Metkuan
     Paralel -> Komdat
 
     # ganjil-genap
-    TOK, Metkuan, Komnum, Analgor, PSTR, PTG, TKI, Sispak, Enterprise, NLP [color="#bb0000"]
+    TOK, Metkuan, Komnum, Analgor, PSTR, PTG, TKI, Sispak, Enterprise, PSBA [color="#bb0000"]
 
     # keterangan
     {rank="sink" Semester interdep ganjilgenap elektif}

@@ -14,7 +14,7 @@ digraph kom2016
     # mayor
     {rank="same" 1 Matematika}
     {rank="same" 2 Algor Kalkulus Penkom}
-    {rank="same" 3 Dasprog Alin Strukdis Radig Metstat PHP Matkom}
+    {rank="same" 3 Dasprog Alin Strukdis Radig Metstat PHP PMK}
     {rank="same" 4 Basprog Strukdat RPL OAK Basdat Metkuan Komnum}
     {rank="same" 5 AI Grafkom SO SI IMK Analgor}
     {rank="same" 6 PCD PSBO Komdat Damin Siscerdas Bioinf}
@@ -23,7 +23,7 @@ digraph kom2016
     Dasprog -> Algor
     Alin -> Matematika
     Strukdis -> Matematika
-    Matkom -> Kalkulus
+    PMK -> Kalkulus
     Basprog -> Dasprog
     OAK -> Radig
     Strukdat -> {Dasprog Strukdis}
@@ -45,21 +45,21 @@ digraph kom2016
     Matematika, Kalkulus, Metstat, Alin, PHP, Bioinf [color="#007700"]
 
     # elektif
-    PSTR, PTG, TKI, Infosec, Sispak, Enterprise, NLP, Paralel [style="dashed"]
+    PSTR, PTG, TKI, KI, Sispak, Enterprise, PSBA, Paralel [style="dashed"]
     {rank="same" 5 PSTR, PTG, TKI}
-    {rank="same" 6 Infosec, Sispak, Enterprise, NLP}
+    {rank="same" 6 KI, Sispak, Enterprise, PSBA}
     {rank="same" 7 Paralel}
     PSTR -> OAK
     PTG -> Basdat
     TKI -> {PHP Strukdat}
-    Infosec -> Strukdis
+    KI -> Strukdis
     Sispak -> AI
     Enterprise -> SI
-    NLP -> Metkuan
+    PSBA -> Metkuan
     Paralel -> Komdat
 
     # ganjil-genap
-    Matkom, Metkuan, Komnum, Analgor, PSTR, PTG, TKI, Sispak, Enterprise, NLP, Bioinf [color="#bb0000"]
+    PMK, Metkuan, Komnum, Analgor, PSTR, PTG, TKI, Sispak, Enterprise, PSBA, Bioinf [color="#bb0000"]
 
     # keterangan
     {rank="sink" Semester interdep ganjilgenap elektif}
