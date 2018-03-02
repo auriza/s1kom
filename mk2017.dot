@@ -1,0 +1,74 @@
+digraph kom2017
+{
+    node [shape="box"; fontname="Fira Sans"]
+    edge [dir="back"]
+    concentrate="true"
+
+    # semester
+    subgraph sem {
+        node [shape="plaintext"]
+        edge [style="invis"]
+        8 -> 7 -> 6 -> 5 -> 4 -> 3 -> 2 -> 1 -> Semester
+    }
+
+    # mayor
+    {rank="same" 1 Matematika Penkom}
+    {rank="same" 2 Kalkulus  Algor}
+    {rank="same" 3 Alin Metstat PHP  Strukdis Dasprog Radig PMK}
+    {rank="same" 4 Basdat OAK Strukdat Basprog RPL Komnum Metkuan}
+    {rank="same" 5 IMK SO Grafkom AI SI Analgor}
+    {rank="same" 6 Bioinf  Damin Komdat PSBO Sisdas PCD}
+    {rank="same" 7 Etikom MPPL MPTP PKL Kolokium}
+    {rank="same" 8 Seminar TA}
+    Alin -> Matematika
+    Strukdis -> Matematika
+    Dasprog -> Algor
+    PMK -> Kalkulus
+    OAK -> Radig
+    Strukdat -> {Dasprog Strukdis}
+    Basprog -> Dasprog
+    RPL -> Dasprog
+    Komnum -> Dasprog
+    Metkuan -> PHP
+    SO -> OAK
+    Grafkom -> Alin
+    AI -> {Dasprog Strukdis}
+    Analgor -> {Dasprog Strukdis}
+    Damin -> {Basdat Metstat}
+    Komdat -> SO
+    PSBO -> Dasprog
+    Sisdas -> Metkuan
+    PCD -> Alin
+    MPPL -> RPL
+    ## ganjil-genap
+    PMK, Metkuan, Komnum, Analgor, Bioinf [color="#bb0000"]
+    ## interdep
+    Matematika, Kalkulus, Metstat, Alin, PHP, Bioinf [color="#007700"]
+
+    # elektif
+    PSTR, PTG, TKI, KI, Sispak, Enterprise, PSBA, Paralel [style="dashed"]
+    {rank="same" 5 PSTR, PTG, TKI}
+    {rank="same" 6 KI, Sispak, Enterprise, PSBA}
+    {rank="same" 7 Paralel}
+    PSTR -> OAK
+    PTG -> Basdat
+    TKI -> {PHP Strukdat}
+    KI -> Strukdis
+    Sispak -> AI
+    Enterprise -> SI
+    PSBA -> Metkuan
+    Paralel -> Komdat
+    ## ganjil-genap
+    PSTR, PTG, TKI, Sispak, Enterprise, PSBA [color="#bb0000"]
+
+    # keterangan
+    {rank="sink" Semester interdep ganjilgenap elektif}
+    interdep [shape="note"; color="#007700"; label="Interdepartemen"]
+    ganjilgenap [shape="note"; color="#bb0000"; label="Ganjil-genap";]
+    elektif [shape="note"; style="dashed"; label="Elektif"]
+
+    # title
+    label="Kurikulum Program Sarjana Ilmu Komputer IPB (2017)"
+    labeljust="r"
+    fontname="Fira Sans"
+}
