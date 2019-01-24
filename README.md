@@ -1,3 +1,3 @@
 # Struktur Kurikulum S1 Ilmu Komputer IPB
 
-![Struktur kurikulum tahun 2017](mk2017.dot.png)
+![Struktur kurikulum tahun 2018](mk2018.dot.png)
