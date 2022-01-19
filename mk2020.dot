@@ -1,0 +1,62 @@
+digraph kom2020
+{
+    node [shape="box"; fontname="B612"]
+    edge [dir="back"]
+    concentrate="true"
+
+    # semester
+    subgraph sem {
+        node [shape="plaintext"]
+        edge [style="invis"]
+        8 -> 7 -> 6 -> 5 -> 4 -> 3 -> 2 -> 1 -> Semester
+    }
+
+    # mayor
+    {rank="same" 1 Matematika CT Statistika}
+    {rank="same" 2 Kalkulus}
+    {rank="same" 3 AlgorDP PMK Radig Alin Strukdis Peluang Basdat}
+    {rank="same" 4 Metkuan Pemrograman OAK Strukdat Grafkom RPL DPP}
+    {rank="same" 5 Analgor SO SI AI Komdat EC1 EC2}
+    {rank="same" 6 PKK PCD Damin KI ADS EC3 EC4 Capstone1}
+    {rank="same" 7 KKNT Capstone2 EC5 EC6 EC7 EC8 Kolokium}
+    {rank="same" 8 Seminar TA}
+    Algor -> CT
+    PMK -> Kalkulus
+    Strukdis -> Matematika
+    Metkuan -> Peluang
+    Pemrograman -> AlgorDP
+    OAK -> Radig
+    Strukdat -> {AlgorDP Strukdis}
+    Grafkom -> Alin
+    RPL -> AlgorDP
+    Analgor -> {AlgorDP Strukdis}
+    SO -> OAK
+    AI -> {AlgorDP Strukdis}
+    Komdat -> OAK
+    PKK -> Metkuan
+    PCD -> Alin
+    Damin -> {Basdat Statistika}
+    KI -> Strukdis
+    ADS -> RPL
+    Seminar -> Kolokium
+    TA -> Seminar
+    ## interdep
+    Matematika, Statistika, Kalkulus, Peluang, KKNT [color="#007700"]
+    ## ganjil-genap
+    PMK [color="#bb0000"]
+
+    # elektif
+    EC1, EC2, EC3, EC4, EC5, EC6, EC7, EC8 [style="dashed"]
+
+
+    # keterangan
+    {rank="sink" Semester interdep ganjilgenap elektif}
+    interdep [shape="note"; color="#007700";  label="Interdept"]
+    ganjilgenap [shape="note"; color="#bb0000"; label="Ganjil-genap";]
+    elektif [shape="note"; style="dashed"; label="Elektif"]
+
+    # title
+    label="Kurikulum Program Sarjana Ilmu Komputer IPB (2020)"
+    labeljust="r"
+    fontname="B612"
+}
