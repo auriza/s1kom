@@ -20,7 +20,7 @@ digraph kom2020
     {rank="same" 6 PKK PCD Damin KI ADS EC3 EC4 Capstone1}
     {rank="same" 7 KKNT Capstone2 EC5 EC6 EC7 EC8 Kolokium}
     {rank="same" 8 Seminar TA}
-    Algor -> CT
+    AlgorDP -> CT
     PMK -> Kalkulus
     Strukdis -> Matematika
     Metkuan -> Peluang
